@@ -219,11 +219,11 @@ media query */
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 1rem;
     }
 
     h3 {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
     }
 
     .rc {
@@ -243,15 +243,15 @@ media query */
 
     .card {
         width: 90%;
-        height: auto;
+        height: 70%;
     }
 
     .card img {
-        width: 90%;
+        width: 75%;
     }
 
     .download, .close {
-        width: 90%;
+        width: 75%;
         font-size: 1rem;
     }
 }
