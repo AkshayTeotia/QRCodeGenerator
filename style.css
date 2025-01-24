@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');:root{
+    --font:"Inter", "serif";
+}
+
+body{
+    padding:0;
+    margin: 0;
+    background-image: url(./qrBg.jpg);
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    box-sizing: border-box  ;
+}
+
+.container{
+    font-family: var(--font);
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container.opacity{
+    opacity: 0.4;
+}
+
+.left-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 50vw;
+}
+.right-container{
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+img{
+    width:150px;
+    margin: 0 20px;
+    border-radius: 10px;
+}
+.lr{
+    margin: 0;
+}
+h1{
+    color: rgb(46, 45, 45);
+    font-size: 3rem;
+    margin: 0;
+}
+h3{
+    color: rgb(46, 45, 45);
+    font-size:2rem;
+    position: relative;
+    bottom: 15px;
+}
+
+.rc{
+    height: 60%;
+    width: 400px;
+    background-color: white ;
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+.ip-label{
+    font-size: 2rem;
+    text-align: center;
+    width: 80%;
+    margin: 10px;
+    
+}
+
+.ipt{
+    font-size: 1.3rem;
+    margin: 10px;
+    width: 77%;
+    border-radius: 3px;
+    padding: 5px;
+    border: 1px solid black;
+
+}
+
+.btn, .download,.close{
+    background-color: black;
+    color: white;
+    margin: 10px;
+    font-size: 1.3rem;
+    width: 80%;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.btn:active{
+    transition: scale 6s ;
+    transform: scale(1.01);
+}
+
+.card{
+    height: 500px;
+    width: 350px;
+    position: absolute;
+    bottom: 60%;
+    border-radius: 10px;
+    background-color: black;
+    display: flex;
+    opacity: 0;
+    transform: scale(0);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out,
+                opacity 0.5s,
+                bottom 0.5s ease-in-out;
+    
+}
+
+.card.show{
+    opacity:1;
+    bottom: 15%;
+    transform: scale(1);
+}
+
+.card h1{
+    font-size: 30px;
+    color: white;
+    font-family: var(--font);
+}
+
+.download{
+    color: black;
+    background-color: white;
+    width: 70%;
+}
+.close{
+    color:white;
+    background-color:black;
+    border: 1px solid white;
+    width: 70%;
+}
+
+.download:hover{
+    transform: scale(1.01);
+}
+.download:active{
+    color:white;
+    background-color:black;
+}
+
+.close:hover{
+    transform: scale(1.01);
+}
+.close:active{
+    color: black;
+    background-color: white;
+}
+.card img{
+    margin: 10px;
+    width: 70%;
+}
+/* 
+media query */
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .left-container, .right-container {
+        width: 90%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .rc {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .ipt {
+        width: 90%;
+    }
+
+    .btn {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .left-container img {
+        width: 100px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .rc {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .ipt {
+        width: 95%;
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 95%;
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .card img {
+        width: 90%;
+    }
+
+    .download, .close {
+        width: 90%;
+        font-size: 1rem;
+    }
+}
